@@ -23,7 +23,6 @@ pub type PoolType = CockroachPool;
 #[cfg(feature = "mysql")]
 pub type PoolType = MysqlPool;
 
-#[cfg(feature = "postgres")]
 pub type PoolType = PostgresPool;
 
 #[cfg(feature = "sqlite")]

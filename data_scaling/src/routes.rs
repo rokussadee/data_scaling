@@ -7,6 +7,7 @@ pub fn configure_routes(cfg: &mut web::ServiceConfig)  {
     cfg.service(
         web::scope("/flora")
             .service(web::resource("/").to(FloraService::get_all))
+            .service(web::resource("/create").to(FloraService::post_flora))
     )
     .service(
         web::scope("/test")
